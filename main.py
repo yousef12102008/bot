@@ -1,20 +1,20 @@
 import requests
 import telebot,time
 from telebot import types
-from gatet import Tele
+from mk import Tele
 import os
-token = '692cvpi1LmnGwtpiCCJsNHjR2ubNc'
+token = '6487569861:AAGt9xCKSwN_bCuLXEDVtJhjr-bAEd89HVc'
 bot=telebot.TeleBot(token,parse_mode="HTML")
 subscriber =1084525687
 @bot.message_handler(commands=["start"])
 def start(message):
-	if not str(message.chat.id) == '5267630441':
+	if not str(message.chat.id) == '6309252183':
 		bot.reply_to(message, "You cannot use the bot to contact developers to purchase a bot subscription @Af5AA")
 		return
 	bot.reply_to(message,"Send the file now \n ارسل الملف الان")
 @bot.message_handler(content_types=["document"])
 def main(message):
-	if not str(message.chat.id) == '5267630441':
+	if not str(message.chat.id) == '6309252183':
 		bot.reply_to(message, "You cannot use the bot to contact developers to purchase a bot subscription @Af5AA")
 		return
 	dd = 0
