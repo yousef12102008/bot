@@ -8,7 +8,7 @@ token = '6487569861:AAGt9xCKSwN_bCuLXEDVtJhjr-bAEd89HVc'
 bot = telebot.TeleBot(token, parse_mode="HTML")
 
 # List of allowed user IDs
-allowed_user_ids = [6309252183, 5491877666]
+allowed_user_ids = [6309252183, 5491877666, 5702577040]
 
 @bot.message_handler(commands=["start"])
 def start(message):
