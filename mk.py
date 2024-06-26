@@ -27,6 +27,8 @@ def Tele(ccx):
 
 
 
+
+
 	cookies = {
     'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29',
     'cookielawinfo-checkbox-necessary': 'yes',
@@ -48,9 +50,9 @@ def Tele(ccx):
     'br_lgv_stat': 'default%7Cdefault',
     'sbjs_migrations': '1418474375998%3D1',
     'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29',
-    'sbjs_udata': 'vst%3D2%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-    'sbjs_session': 'pgs%3D8%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fce4less.com%2Fmy-account%2Fadd-payment-method%2F',
-    '_ga_JVCGZDD7ML': 'GS1.1.1719407444.2.1.1719407568.15.0.28242219',
+    'sbjs_udata': 'vst%3D3%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
+    'sbjs_session': 'pgs%3D2%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fce4less.com%2Fmy-account%2Fadd-payment-method%2F',
+    '_ga_JVCGZDD7ML': 'GS1.1.1719416400.3.0.1719416400.60.0.18566749',
     '_uetsid': 'f6554730333611ef8399318838359d69',
     '_uetvid': 'f6576db0333611ef84c20f801562952c',
 }
@@ -60,7 +62,7 @@ def Tele(ccx):
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
     'cache-control': 'no-cache',
-    # 'cookie': 'sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29; cookielawinfo-checkbox-necessary=yes; _gcl_au=1.1.1962690505.1719349662; _ga=GA1.1.1227635990.1719349663; _fbp=fb.1.1719349663689.89528477480537170; cookielawinfo-checkbox-functional=yes; cookielawinfo-checkbox-performance=yes; cookielawinfo-checkbox-analytics=yes; cookielawinfo-checkbox-advertisement=yes; cookielawinfo-checkbox-others=yes; viewed_cookie_policy=yes; cli_user_preference=en-cli-yes-checkbox-necessary-yes-checkbox-functional-yes-checkbox-performance-yes-checkbox-analytics-yes-checkbox-advertisement-yes-checkbox-others-yes; CookieLawInfoConsent=eyJ2ZXIiOiIxIiwibmVjZXNzYXJ5IjoidHJ1ZSIsImZ1bmN0aW9uYWwiOiJ0cnVlIiwicGVyZm9ybWFuY2UiOiJ0cnVlIiwiYW5hbHl0aWNzIjoidHJ1ZSIsImFkdmVydGlzZW1lbnQiOiJ0cnVlIiwib3RoZXJzIjoidHJ1ZSJ9; newpass_announce=true; closed_announcement=true; wordpress_sec_22d584ae58f64e78cb2ffa7e67fadab7=moh5h52vbnm%7C1720559322%7CA4vP8a3LhhNoZvMlqX38sffYy4YIXJyGiYmEtvbUjYi%7C4d7f24b0256511f50f7b1ef82e6824a163f84c981c8e45f50ed5721bd13a6d8c; wordpress_logged_in_22d584ae58f64e78cb2ffa7e67fadab7=moh5h52vbnm%7C1720559322%7CA4vP8a3LhhNoZvMlqX38sffYy4YIXJyGiYmEtvbUjYi%7C139a76ae7f8579dd10fc23d569aa3e9159e0949b727eff66e34ec53c7c16f3db; br_lgv_stat=default%7Cdefault; sbjs_migrations=1418474375998%3D1; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29; sbjs_udata=vst%3D2%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; sbjs_session=pgs%3D8%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fce4less.com%2Fmy-account%2Fadd-payment-method%2F; _ga_JVCGZDD7ML=GS1.1.1719407444.2.1.1719407568.15.0.28242219; _uetsid=f6554730333611ef8399318838359d69; _uetvid=f6576db0333611ef84c20f801562952c',
+    # 'cookie': 'sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29; cookielawinfo-checkbox-necessary=yes; _gcl_au=1.1.1962690505.1719349662; _ga=GA1.1.1227635990.1719349663; _fbp=fb.1.1719349663689.89528477480537170; cookielawinfo-checkbox-functional=yes; cookielawinfo-checkbox-performance=yes; cookielawinfo-checkbox-analytics=yes; cookielawinfo-checkbox-advertisement=yes; cookielawinfo-checkbox-others=yes; viewed_cookie_policy=yes; cli_user_preference=en-cli-yes-checkbox-necessary-yes-checkbox-functional-yes-checkbox-performance-yes-checkbox-analytics-yes-checkbox-advertisement-yes-checkbox-others-yes; CookieLawInfoConsent=eyJ2ZXIiOiIxIiwibmVjZXNzYXJ5IjoidHJ1ZSIsImZ1bmN0aW9uYWwiOiJ0cnVlIiwicGVyZm9ybWFuY2UiOiJ0cnVlIiwiYW5hbHl0aWNzIjoidHJ1ZSIsImFkdmVydGlzZW1lbnQiOiJ0cnVlIiwib3RoZXJzIjoidHJ1ZSJ9; newpass_announce=true; closed_announcement=true; wordpress_sec_22d584ae58f64e78cb2ffa7e67fadab7=moh5h52vbnm%7C1720559322%7CA4vP8a3LhhNoZvMlqX38sffYy4YIXJyGiYmEtvbUjYi%7C4d7f24b0256511f50f7b1ef82e6824a163f84c981c8e45f50ed5721bd13a6d8c; wordpress_logged_in_22d584ae58f64e78cb2ffa7e67fadab7=moh5h52vbnm%7C1720559322%7CA4vP8a3LhhNoZvMlqX38sffYy4YIXJyGiYmEtvbUjYi%7C139a76ae7f8579dd10fc23d569aa3e9159e0949b727eff66e34ec53c7c16f3db; br_lgv_stat=default%7Cdefault; sbjs_migrations=1418474375998%3D1; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29; sbjs_udata=vst%3D3%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; sbjs_session=pgs%3D2%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fce4less.com%2Fmy-account%2Fadd-payment-method%2F; _ga_JVCGZDD7ML=GS1.1.1719416400.3.0.1719416400.60.0.18566749; _uetsid=f6554730333611ef8399318838359d69; _uetvid=f6576db0333611ef84c20f801562952c',
     'pragma': 'no-cache',
     'referer': 'https://ce4less.com/my-account/add-payment-method/',
     'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
@@ -75,7 +77,6 @@ def Tele(ccx):
 }
 
 	response = requests.get('https://ce4less.com/my-account/add-payment-method/', cookies=cookies, headers=headers)
-	
 	add_nonce = re.search(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"', response.text).group(1)
 	
 	client_token_nonce = re.search(r'"client_token_nonce":"(.*?)"', response.text).group(1)
