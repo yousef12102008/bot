@@ -9,7 +9,7 @@ token = '6848019028:AAGDVZ4MIlMKOL0pRjtjMOadz4qkf9cqarU'
 bot = telebot.TeleBot(token, parse_mode="HTML")
 
 # قائمة ID المسموح لهم
-allowed_ids = [5490465497]
+allowed_ids = [5490465497, 5964228363, 6309252183]
 
 @bot.message_handler(commands=["start"])
 def start(message):
