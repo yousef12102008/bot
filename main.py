@@ -9,7 +9,10 @@ token = '7254770576:AAGpzgPgmhjSQ-BCNu7meO66Yz1yYO81Xp0'
 bot = telebot.TeleBot(token, parse_mode="HTML")
 
 # قائمة ID المسموح لهم
-allowed_ids = [6309252183, 5789150210, 5964228363]
+allowed_ids = [6309252183, 5789150210, 5964228363 ]
+
+# قائمة الانتظار للمستخدمين الذين يحاولون الفحص أثناء انشغال البوت
+waiting_list = []
 
 @bot.message_handler(commands=["start"])
 def start(message):
@@ -30,6 +33,17 @@ def handle_document(message):
     if message.chat.id not in allowed_ids:
         bot.reply_to(message, "🚫 You cannot use the bot. Contact developers to purchase a bot subscription @Af5AA")
         return
+
+    # التحقق مما إذا كان الفحص قيد التقدم
+    if os.path.exists("busy.lock"):
+        bot.reply_to(message, "🚫 Another user is currently using the bot. Please wait until they finish.")
+        waiting_list.append(message)
+        return
+    
+    # إنشاء ملف القفل للإشارة إلى أن الفحص قيد التقدم
+    with open("busy.lock", "w") as file:
+        pass
+    
     asyncio.run(main(message))
 
 async def main(message):
@@ -45,7 +59,7 @@ async def main(message):
         with open("combo.txt", 'r') as file:
             lino = file.readlines()
             total = len(lino)
-            if total > 2000000:
+            if total > 200:
                 bot.reply_to(message, "🚫 You have exceeded the limit of 2000 cards. You will be banned.")
                 return
             for i, cc in enumerate(lino):
@@ -111,10 +125,19 @@ async def main(message):
                 else:
                     declined += 1
                 
-                await asyncio.sleep(25)
+                await asyncio.sleep(22)
     except Exception as e:
         print(e)
     bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='✔️ COMPLETED ✅\nBOT BY ➜ @Af5AA')
+    
+    # إزالة ملف القفل للإشارة إلى انتهاء الفحص
+    if os.path.exists("busy.lock"):
+        os.remove("busy.lock")
+    
+    # إخطار المستخدمين في قائمة الانتظار
+    if waiting_list:
+        next_user = waiting_list.pop(0)
+        bot.send_message(next_user.chat.id, "✅ The bot is now available. You can send your file.")
 
 @bot.callback_query_handler(func=lambda call: call.data == 'stop')
 def menu_callback(call):
