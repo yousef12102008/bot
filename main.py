@@ -5,11 +5,11 @@ from telebot import types
 from mk import Tele
 import os
 
-token = '6848019028:AAGDVZ4MIlMKOL0pRjtjMOadz4qkf9cqarU'
+token = '7254770576:AAGpzgPgmhjSQ-BCNu7meO66Yz1yYO81Xp0'
 bot = telebot.TeleBot(token, parse_mode="HTML")
 
 # قائمة ID المسموح لهم
-allowed_ids = [6309252183, 5964228363]
+allowed_ids = [6309252183, 5789150210, 5964228363]
 
 @bot.message_handler(commands=["start"])
 def start(message):
@@ -35,6 +35,7 @@ def handle_document(message):
 async def main(message):
     live = 0
     declined = 0
+    risk = 0  # إضافة عداد للمخاطر
     ko = bot.reply_to(message, "⌛ Checking Your Cards...").message_id
     ee = bot.download_file(bot.get_file(message.document.file_id).file_path)
     with open("combo.txt", "wb") as w:
@@ -47,7 +48,7 @@ async def main(message):
             if total > 2000000:
                 bot.reply_to(message, "🚫 You have exceeded the limit of 2000 cards. You will be banned.")
                 return
-            for cc in lino:
+            for i, cc in enumerate(lino):
                 if os.path.exists("stop.stop"):
                     bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='🛑 STOPPED ✅\nBOT BY ➜ @Af5AA')
                     os.remove('stop.stop')
@@ -72,18 +73,21 @@ async def main(message):
                     last = "ERROR"
 
                 if 'risk' in last:
-                    last = 'declined'
+                    last = 'risk'
+                    risk += 1
                 elif 'Duplicate' in last:
                     last = 'Approved'
+                
 
                 mes = types.InlineKeyboardMarkup(row_width=1)
                 cm1 = types.InlineKeyboardButton(f"💳 {cc} 💳", callback_data='u8')
                 status = types.InlineKeyboardButton(f"📊 STATUS ➜ {last}", callback_data='u8')
                 cm3 = types.InlineKeyboardButton(f"✅ APPROVED ➜ [ {live} ]", callback_data='x')
                 cm4 = types.InlineKeyboardButton(f"❌ DECLINED ➜ [ {declined} ]", callback_data='x')
-                cm5 = types.InlineKeyboardButton(f"📊 TOTAL ➜ [ {total} ]", callback_data='x')
+                cm6 = types.InlineKeyboardButton(f"⚠️ RISK ➜ [ {risk} ]", callback_data='x')  # إضافة زر للمخاطر
+                cm5 = types.InlineKeyboardButton(f"📊 TOTAL ➜ [ {total} / {total - i - 1} ]", callback_data='x')  # تحديث الكمية
                 stop = types.InlineKeyboardButton(f"🛑 [ STOP ]", callback_data='stop')
-                mes.add(cm1, status, cm3, cm4, cm5, stop)
+                mes.add(cm1, status, cm3, cm4, cm6, cm5, stop)
 
                 bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='🔄 Wait for processing by @Af5AA', reply_markup=mes)
 
@@ -107,7 +111,7 @@ async def main(message):
                 else:
                     declined += 1
                 
-                await asyncio.sleep(21)
+                await asyncio.sleep(25)
     except Exception as e:
         print(e)
     bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='✔️ COMPLETED ✅\nBOT BY ➜ @Af5AA')
