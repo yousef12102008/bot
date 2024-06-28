@@ -91,7 +91,7 @@ async def main(message):
                     risk += 1
                 elif 'Duplicate' in last:
                     last = 'Approved'
-                    
+                    live += 1
                 
 
                 mes = types.InlineKeyboardMarkup(row_width=1)
@@ -123,7 +123,7 @@ async def main(message):
                 if "live" in last or 'Approved' in last:
                     bot.reply_to(message, msg)
                 
-                await asyncio.sleep(22)
+                await asyncio.sleep(23)
     except Exception as e:
         print(e)
     finally:
