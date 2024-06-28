@@ -9,7 +9,7 @@ token = '7254770576:AAGpzgPgmhjSQ-BCNu7meO66Yz1yYO81Xp0'
 bot = telebot.TeleBot(token, parse_mode="HTML")
 
 # قائمة ID المسموح لهم
-allowed_ids = [6309252183, 5789150210, 5964228363]
+allowed_ids = [6309252183, 5789150210, 5964228363, 1072224102]
 
 # قائمة الانتظار للمستخدمين الذين يحاولون الفحص أثناء انشغال البوت
 waiting_list = []
