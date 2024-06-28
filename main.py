@@ -92,7 +92,8 @@ async def main(message):
                 elif 'Duplicate' in last:
                     last = 'Approved'
                     live += 1
-                
+                else:
+                    declined += 1
 
                 mes = types.InlineKeyboardMarkup(row_width=1)
                 cm1 = types.InlineKeyboardButton(f"💳 {cc.strip()} 💳", callback_data='u8')
@@ -123,7 +124,7 @@ async def main(message):
                 if "live" in last or 'Approved' in last:
                     bot.reply_to(message, msg)
                 
-                await asyncio.sleep(23)
+                await asyncio.sleep(22)
     except Exception as e:
         print(e)
     finally:
