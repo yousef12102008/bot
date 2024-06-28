@@ -91,7 +91,7 @@ async def main(message):
                     risk += 1
                 elif 'Duplicate' in last:
                     last = 'Approved'
-                    live += 1
+                    
                 
 
                 mes = types.InlineKeyboardMarkup(row_width=1)
