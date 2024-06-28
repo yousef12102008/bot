@@ -123,7 +123,7 @@ async def main(message):
                 if "live" in last or 'Approved' in last:
                     bot.reply_to(message, msg)
                 
-                await asyncio.sleep(1)
+                await asyncio.sleep(22)
     except Exception as e:
         print(e)
     finally:
