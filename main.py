@@ -9,7 +9,7 @@ token = '7254770576:AAGpzgPgmhjSQ-BCNu7meO66Yz1yYO81Xp0'
 bot = telebot.TeleBot(token, parse_mode="HTML")
 
 # قائمة ID المسموح لهم
-allowed_ids = [6309252183, 5789150210, 5964228363 ]
+allowed_ids = [6309252183, 5789150210, 5964228363]
 
 # قائمة الانتظار للمستخدمين الذين يحاولون الفحص أثناء انشغال البوت
 waiting_list = []
@@ -60,13 +60,13 @@ async def main(message):
             lino = file.readlines()
             total = len(lino)
             if total > 200:
-                bot.reply_to(message, "🚫 You have exceeded the limit of 2000 cards. You will be banned.")
+                bot.reply_to(message, "🚫 You have exceeded the limit of 200 cards. You will be banned.")
                 return
             for i, cc in enumerate(lino):
                 if os.path.exists("stop.stop"):
                     bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='🛑 STOPPED ✅\nBOT BY ➜ @Af5AA')
                     os.remove('stop.stop')
-                    return
+                    break
                 
                 try:
                     data = requests.get('https://lookup.binlist.net/' + cc[:6]).json()
@@ -91,10 +91,11 @@ async def main(message):
                     risk += 1
                 elif 'Duplicate' in last:
                     last = 'Approved'
+                    live += 1
                 
 
                 mes = types.InlineKeyboardMarkup(row_width=1)
-                cm1 = types.InlineKeyboardButton(f"💳 {cc} 💳", callback_data='u8')
+                cm1 = types.InlineKeyboardButton(f"💳 {cc.strip()} 💳", callback_data='u8')
                 status = types.InlineKeyboardButton(f"📊 STATUS ➜ {last}", callback_data='u8')
                 cm3 = types.InlineKeyboardButton(f"✅ APPROVED ➜ [ {live} ]", callback_data='x')
                 cm4 = types.InlineKeyboardButton(f"❌ DECLINED ➜ [ {declined} ]", callback_data='x')
@@ -105,7 +106,7 @@ async def main(message):
 
                 bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='🔄 Wait for processing by @Af5AA', reply_markup=mes)
 
-                msg = f'''◆ CARD ➜ {cc} 
+                msg = f'''◆ CARD ➜ {cc.strip()} 
 ◆ STATUS ➜ APPROVED 🔥
 ◆ RESULT ➜ #Approved
 ◆ GATEWAY ➜ BRAINTREE AUTH 
@@ -120,24 +121,22 @@ async def main(message):
                 print(last)
 
                 if "live" in last or 'Approved' in last:
-                    live += 1
                     bot.reply_to(message, msg)
-                else:
-                    declined += 1
                 
-                await asyncio.sleep(22)
+                await asyncio.sleep(1)
     except Exception as e:
         print(e)
-    bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='✔️ COMPLETED ✅\nBOT BY ➜ @Af5AA')
-    
-    # إزالة ملف القفل للإشارة إلى انتهاء الفحص
-    if os.path.exists("busy.lock"):
-        os.remove("busy.lock")
-    
-    # إخطار المستخدمين في قائمة الانتظار
-    if waiting_list:
-        next_user = waiting_list.pop(0)
-        bot.send_message(next_user.chat.id, "✅ The bot is now available. You can send your file.")
+    finally:
+        bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='✔️ COMPLETED ✅\nBOT BY ➜ @Af5AA')
+        
+        # إزالة ملف القفل للإشارة إلى انتهاء الفحص
+        if os.path.exists("busy.lock"):
+            os.remove("busy.lock")
+        
+        # إخطار المستخدمين في قائمة الانتظار
+        if waiting_list:
+            next_user = waiting_list.pop(0)
+            bot.send_message(next_user.chat.id, "✅ The bot is now available. You can send your file.")
 
 @bot.callback_query_handler(func=lambda call: call.data == 'stop')
 def menu_callback(call):
