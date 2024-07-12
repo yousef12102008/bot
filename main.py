@@ -1,6 +1,6 @@
 import os
 from telegram import Update
-from telegram.ext import Updater, CommandHandler, MessageHandler, filters, CallbackContext
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 import subprocess
 import autopep8
 
@@ -30,7 +30,7 @@ def fix_errors(file_path):
 def handle_document(update: Update, context: CallbackContext) -> None:
     document = update.message.document
     if document.file_name.endswith('.py'):
-        file = context.bot.getFile(document.file_id)
+        file = context.bot.get_file(document.file_id)
         file_path = os.path.join(UPLOAD_FOLDER, document.file_name)
         file.download(file_path)
         update.message.reply_text('تم استلام الملف، جاري الفحص والتصحيح...')
@@ -41,14 +41,12 @@ def handle_document(update: Update, context: CallbackContext) -> None:
 
 def main():
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-    updater = Updater(TOKEN)
-    dispatcher = updater.dispatcher
+    application = Application.builder().token(TOKEN).build()
 
-    dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(MessageHandler(filters.Document.MIME_type("text/x-python"), handle_document))
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(MessageHandler(filters.Document.MIME_type("text/x-python"), handle_document))
 
-    updater.start_polling()
-    updater.idle()
+    application.run_polling()
 
 if __name__ == '__main__':
     main()
