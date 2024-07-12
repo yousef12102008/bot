@@ -4,7 +4,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import subprocess
 import autopep8
 
-TOKEN = os.getenv('6487569861:AAGt9xCKSwN_bCuLXEDVtJhjr-bAEd89HVc')
+TOKEN = '6487569861:AAGt9xCKSwN_bCuLXEDVtJhjr-bAEd89HVc'
 UPLOAD_FOLDER = 'uploads'
 
 def start(update: Update, context: CallbackContext) -> None:
