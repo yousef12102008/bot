@@ -1,11 +1,10 @@
 import os
 from telegram import Update
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters, CallbackContext
 import subprocess
 import autopep8
 
-# تعيين توكن البوت هنا
-TOKEN = '6487569861:AAGt9xCKSwN_bCuLXEDVtJhjr-bAEd89HVc'
+TOKEN = os.getenv('6487569861:AAGt9xCKSwN_bCuLXEDVtJhjr-bAEd89HVc')
 UPLOAD_FOLDER = 'uploads'
 
 def start(update: Update, context: CallbackContext) -> None:
@@ -46,11 +45,10 @@ def main():
     dispatcher = updater.dispatcher
 
     dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(MessageHandler(Filters.document, handle_document))
+    dispatcher.add_handler(MessageHandler(filters.Document.MIME_type("text/x-python"), handle_document))
 
     updater.start_polling()
     updater.idle()
 
 if __name__ == '__main__':
     main()
-
