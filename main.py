@@ -44,7 +44,7 @@ def main():
     application = Application.builder().token(TOKEN).build()
 
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(MessageHandler(filters.Document.MIME_type("text/x-python"), handle_document))
+    application.add_handler(MessageHandler(filters.Document.MimeType("text/x-python"), handle_document))
 
     application.run_polling()
 
