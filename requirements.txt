@@ -1,6 +1,3 @@
-telegram
-requests
-pyTelegramBotAPI
-user_agent
-Pyjwt
-requests_toolbelt
+python-telegram-bot
+autopep8
+flake8
