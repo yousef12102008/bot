@@ -1,3 +1,5 @@
-python-telegram-bot==20.0
-autopep8
-flake8
+requests
+pyTelegramBotAPI
+user_agent
+Pyjwt
+requests_toolbelt
